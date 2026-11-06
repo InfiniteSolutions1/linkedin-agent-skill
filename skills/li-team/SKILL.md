@@ -21,14 +21,18 @@ together for the user.
 | --- | --- | --- |
 | `linkedin-strategist` | `li-plan`, `li-audit`, `li-profile` | weekly planning, analytics, profile scoring and rewrites |
 | `linkedin-writer` | `li-post`, `li-carousel`, `li-repurpose` | new posts, hooks, carousels, turning long content into posts |
-| `linkedin-web-designer` | `li-carousel` (design + PDF), `li-profile` (banner, featured) | banners, carousel PDFs, post images, newsletter covers, landing pages |
+| `linkedin-web-designer` | `li-carousel` (design + PDF), `li-profile` (banner, featured), plus 13 design skills: `impeccable`, `make-interfaces-feel-better`, `transitions-*`, `gsap-*` | banners, carousel PDFs, post images, newsletter covers, landing pages |
 | `linkedin-engager` | `li-comment`, `li-reply` | comments on others' posts, replies under the user's posts |
-| `linkedin-outreach` | `li-dm`, `li-inbox` | connection notes, DMs, follow-ups, inbox triage |
+| `linkedin-outreach` | `li-dm`, `li-inbox`, `google-maps-scraper` | connection notes, DMs, follow-ups, inbox triage, local-business lead lists |
 | `linkedin-editor` | `li-human` | the quality gate: any draft without a passing HUMAN SCORE |
 
 Every agent also runs `li-human` on its own output, so the editor is for
 drafts that come in from outside the team, or that still score REVIEW or
 FLAGGED.
+
+The third-party skills are installed separately with
+`scripts/install-companion-skills.sh`. An agent without them still works,
+with fewer tools.
 
 ## Routing
 

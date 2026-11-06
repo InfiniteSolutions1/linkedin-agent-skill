@@ -77,9 +77,9 @@ and puts the results back together.
 | --- | --- | --- |
 | [`linkedin-strategist`](agents/linkedin-strategist.md) | `li-plan`, `li-audit`, `li-profile` | Decides what gets made. Its hand-off is the week's dispatch list. |
 | [`linkedin-writer`](agents/linkedin-writer.md) | `li-post`, `li-carousel`, `li-repurpose` | Everything that goes in the feed. |
-| [`linkedin-web-designer`](agents/linkedin-web-designer.md) | `li-carousel`, `li-profile` | Banners, carousel PDFs, post images, newsletter covers and the landing page your Featured link points to. Rendered from HTML with headless Chromium. |
+| [`linkedin-web-designer`](agents/linkedin-web-designer.md) | `li-carousel`, `li-profile` + 13 design skills | Banners, carousel PDFs, post images, newsletter covers and the landing page your Featured link points to. Rendered from HTML with headless Chromium. |
 | [`linkedin-engager`](agents/linkedin-engager.md) | `li-comment`, `li-reply` | Public conversation, and flags leads it finds in the comments. |
-| [`linkedin-outreach`](agents/linkedin-outreach.md) | `li-dm`, `li-inbox` | One-to-one messages and inbox triage. |
+| [`linkedin-outreach`](agents/linkedin-outreach.md) | `li-dm`, `li-inbox`, `google-maps-scraper` | One-to-one messages, inbox triage, and local-business lead lists from Google Maps. |
 | [`linkedin-editor`](agents/linkedin-editor.md) | `li-human` | The quality gate. Nothing below PASS reaches you. |
 
 Every agent runs `li-human` on its own output too. Installed as a plugin, the
@@ -91,6 +91,28 @@ cp linkedin-agent-skill/agents/*.md ~/.claude/agents/
 ```
 
 Then: `/li-team plan and write my week`.
+
+### Companion skills
+
+Two agents also use third-party skills. They are not bundled here: the
+installer pulls each one from its own repo, under its own licence.
+
+```bash
+scripts/install-companion-skills.sh            # all 14, into ~/.claude/skills
+scripts/install-companion-skills.sh --project  # into ./.claude/skills instead
+scripts/install-companion-skills.sh --only design   # or: --only leads
+```
+
+| repo | skills | agent |
+| --- | --- | --- |
+| [pbakaus/impeccable](https://github.com/pbakaus/impeccable) (Apache-2.0) | `impeccable` | web designer |
+| [greensock/gsap-skills](https://github.com/greensock/gsap-skills) (MIT) | 8 `gsap-*` skills | web designer |
+| [Jakubantalik/transitions.dev](https://github.com/Jakubantalik/transitions.dev) (own licence) | `transitions-dev`, `transitions-polish`, `transitions-ui-generation` | web designer |
+| [jakubkrehel/make-interfaces-feel-better](https://github.com/jakubkrehel/make-interfaces-feel-better) (MIT) | `make-interfaces-feel-better` | web designer |
+| [gosom/google-maps-scraper](https://github.com/gosom/google-maps-scraper) (MIT) | `google-maps-scraper` (needs Docker) | outreach |
+
+Restart Claude Code after installing. An agent missing a companion skill
+still runs, it just says which one it could not use.
 
 ## The humanizer
 

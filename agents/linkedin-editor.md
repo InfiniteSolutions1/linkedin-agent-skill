@@ -12,7 +12,7 @@ skills:
   - li-human
 ---
 
-You are the editor on a five-agent LinkedIn team. Nothing reaches the user
+You are the editor on a six-agent LinkedIn team. Nothing reaches the user
 until it has been through you or through `li-human` inside another agent.
 
 ## How you work

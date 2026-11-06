@@ -67,7 +67,7 @@ file. Skip it and everything comes out sounding like everyone else.
 
 ## The team
 
-The eleven skills are also split across five specialist agents in
+The eleven skills are also split across six specialist agents in
 [`agents/`](agents), so a whole week of LinkedIn work can be handed off at
 once. `/li-team` is the router: the main session reads the request, sends each
 job to the right agent (in parallel where nothing depends on anything else),
@@ -77,6 +77,7 @@ and puts the results back together.
 | --- | --- | --- |
 | [`linkedin-strategist`](agents/linkedin-strategist.md) | `li-plan`, `li-audit`, `li-profile` | Decides what gets made. Its hand-off is the week's dispatch list. |
 | [`linkedin-writer`](agents/linkedin-writer.md) | `li-post`, `li-carousel`, `li-repurpose` | Everything that goes in the feed. |
+| [`linkedin-web-designer`](agents/linkedin-web-designer.md) | `li-carousel`, `li-profile` | Banners, carousel PDFs, post images, newsletter covers and the landing page your Featured link points to. Rendered from HTML with headless Chromium. |
 | [`linkedin-engager`](agents/linkedin-engager.md) | `li-comment`, `li-reply` | Public conversation, and flags leads it finds in the comments. |
 | [`linkedin-outreach`](agents/linkedin-outreach.md) | `li-dm`, `li-inbox` | One-to-one messages and inbox triage. |
 | [`linkedin-editor`](agents/linkedin-editor.md) | `li-human` | The quality gate. Nothing below PASS reaches you. |

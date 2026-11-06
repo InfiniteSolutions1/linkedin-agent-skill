@@ -1,7 +1,7 @@
 {
   "name": "linkedin-agent",
-  "description": "Eleven Claude skills and a five-agent team that run a LinkedIn account: a strategist (plan, audit, profile), a writer (posts off 21 hook formulas, carousels, repurposing), an engager (comments, replies), outreach (DMs, inbox triage) and an editor running a humanizer that strips the AI fingerprint and scores every draft before it goes out.",
-  "version": "1.1.0",
+  "description": "Eleven Claude skills and a six-agent team that run a LinkedIn account: a strategist (plan, audit, profile), a writer (posts off 21 hook formulas, carousels, repurposing), a web designer (banners, carousel PDFs, landing pages), an engager (comments, replies), outreach (DMs, inbox triage) and an editor running a humanizer that strips the AI fingerprint and scores every draft before it goes out.",
+  "version": "1.2.0",
   "author": {
     "name": "Jake Schincariol",
     "url": "https://opusjake.ai"

@@ -65,6 +65,32 @@ file. Skip it and everything comes out sounding like everyone else.
 | `/li-inbox` | Triages the inbox into lead / recruiter / peer / ask / spam, and tells you which tell gave the sequence away. |
 | `/li-audit` | Post-mortem on what you have already published. Ranks by engagement rate and reach multiple, not impressions. |
 
+## The team
+
+The eleven skills are also split across five specialist agents in
+[`agents/`](agents), so a whole week of LinkedIn work can be handed off at
+once. `/li-team` is the router: the main session reads the request, sends each
+job to the right agent (in parallel where nothing depends on anything else),
+and puts the results back together.
+
+| agent | owns | job |
+| --- | --- | --- |
+| [`linkedin-strategist`](agents/linkedin-strategist.md) | `li-plan`, `li-audit`, `li-profile` | Decides what gets made. Its hand-off is the week's dispatch list. |
+| [`linkedin-writer`](agents/linkedin-writer.md) | `li-post`, `li-carousel`, `li-repurpose` | Everything that goes in the feed. |
+| [`linkedin-engager`](agents/linkedin-engager.md) | `li-comment`, `li-reply` | Public conversation, and flags leads it finds in the comments. |
+| [`linkedin-outreach`](agents/linkedin-outreach.md) | `li-dm`, `li-inbox` | One-to-one messages and inbox triage. |
+| [`linkedin-editor`](agents/linkedin-editor.md) | `li-human` | The quality gate. Nothing below PASS reaches you. |
+
+Every agent runs `li-human` on its own output too. Installed as a plugin, the
+agents come with it. Installed by hand, also copy them:
+
+```bash
+cp -r linkedin-agent-skill/skills/li-* ~/.claude/skills/
+cp linkedin-agent-skill/agents/*.md ~/.claude/agents/
+```
+
+Then: `/li-team plan and write my week`.
+
 ## The humanizer
 
 `/li-human` ships two Python scripts with no dependencies. They run on your

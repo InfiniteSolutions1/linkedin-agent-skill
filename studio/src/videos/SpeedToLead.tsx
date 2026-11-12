@@ -9,8 +9,8 @@ import { LeadRace } from "../scenes/LeadRace";
 import { Beat, Reel } from "./buildReel";
 
 /**
- * Reel: speed to lead. The two statistics below have NO source yet — they render with a
- * "SOURCE NEEDED" tag until statSource / claimSource are filled in. Do not post until they are.
+ * Reel: speed to lead. The race scene uses plain, non-numeric lines (matching the voiceover).
+ * The original stats (4+ firms, 80% first-to-call) were removed until a source is provided.
  */
 export const speedBeats: Beat[] = [
   { name: "Hook", vo: "301", sec: 2.8, then: "glitch", el: <Orbit label="NEW LEAD · META FORM · 2:14 PM" caption="Who calls first?" /> },
@@ -33,8 +33,9 @@ export const speedBeats: Beat[] = [
     el: (
       <LeadRace
         heading="They didn't only contact you."
-        stat="Injury searchers click, view and fill out forms with at least 4 firms."
-        claim="The first firm to call has an 80% chance of signing the client."
+        stat="Right now, your lead is filling out forms with other firms too."
+        claim="The first one to call usually wins."
+        needsSource={false}
         lanes={[
           { firm: "Firm A", callsAt: "1 min", at: 0.12 },
           { firm: "Firm B", callsAt: "9 min", at: 0.45 },

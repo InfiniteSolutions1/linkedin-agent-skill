@@ -8,7 +8,8 @@ import { tween, usePacedFrame } from "../effects/util";
 export type Lane = { firm: string; callsAt: string; at: number; you?: boolean };
 
 /** One lead, several firms. Each lane's timer runs until that firm calls back; the first call wins. */
-export const LeadRace: React.FC<{ heading: string; lanes: Lane[]; stat: string; statSource?: string; claim: string; claimSource?: string }> = ({ heading, lanes, stat, statSource, claim, claimSource }) => {
+/** needsSource: true when stat/claim are statistics (shows SOURCE NEEDED until sourced); false for plain, non-numeric lines. */
+export const LeadRace: React.FC<{ heading: string; lanes: Lane[]; stat: string; statSource?: string; claim: string; claimSource?: string; needsSource?: boolean }> = ({ heading, lanes, stat, statSource, claim, claimSource, needsSource = true }) => {
   const frame = usePacedFrame();
   const { fps } = useVideoConfig();
   const run = tween(frame, 10, 70, 0, 1, (t) => t);
@@ -18,7 +19,7 @@ export const LeadRace: React.FC<{ heading: string; lanes: Lane[]; stat: string; 
       <div style={{ position: "absolute", left: 90, right: 90, top: 200, fontFamily: brand.serif, fontSize: 80, lineHeight: 1.08, color: brand.cream }}>{heading}</div>
       <div style={{ position: "absolute", left: 90, right: 90, top: 470, opacity: tween(frame, 4, 14, 0, 1) }}>
         <div style={{ fontFamily: brand.sans, fontSize: 38, color: "rgba(247,244,238,0.8)" }}>{stat}</div>
-        <SourceTag source={statSource} style={{ marginTop: 14 }} />
+        {needsSource || statSource ? <SourceTag source={statSource} style={{ marginTop: 14 }} /> : null}
       </div>
       {lanes.map((l, i) => {
         const done = run >= l.at;
@@ -37,7 +38,7 @@ export const LeadRace: React.FC<{ heading: string; lanes: Lane[]; stat: string; 
       })}
       <div style={{ position: "absolute", left: 90, right: 90, top: 1400, opacity: tween(frame, 72, 84, 0, 1) }}>
         <div style={{ fontFamily: brand.serif, fontSize: 68, lineHeight: 1.1, color: brand.goldLight }}>{claim}</div>
-        <SourceTag source={claimSource} style={{ marginTop: 18 }} />
+        {needsSource || claimSource ? <SourceTag source={claimSource} style={{ marginTop: 18 }} /> : null}
       </div>
     </Stage>
   );

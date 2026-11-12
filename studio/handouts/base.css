@@ -28,3 +28,9 @@ td .q { color: #27313a; font-size: 8.6pt; display: block; margin-top: 2px; }
 .cta .s { font-size: 9pt; color: #d6aa66; margin-top: 5px; letter-spacing: .02em; }
 .cta .u { font-family: Lora, serif; font-size: 12.5pt; color: #d6aa66; white-space: nowrap; }
 .foot { font-size: 7.5pt; color: #9ca3af; margin-top: 8px; text-align: center; }
+.page + .page { page-break-before: always; }
+.kpi td { font-size: 9pt; padding: 5px 5px; }
+.kpi td.f { color: #27313a; font-size: 8.4pt; }
+.kpi td.r { color: #315f72; font-size: 8.2pt; font-weight: 600; white-space: nowrap; }
+.kpi td.w { width: 0.62in; border-bottom: 1px solid #9ca3af; }
+.kpi tr.grp td { padding-top: 10px; font-size: 8pt; letter-spacing: .12em; text-transform: uppercase; color: #7d5a22; font-weight: 700; border-bottom: 1.5px solid #b48a4a; }

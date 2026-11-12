@@ -11,7 +11,7 @@ export const RemotionRoot: React.FC = () => {
   const v = { fps: FPS, width: W, height: H };
   return (
     <>
-      <Composition id="EffectsReel" component={EffectsReel} durationInFrames={1252} {...v} />
+      <Composition id="EffectsReel" component={EffectsReel} durationInFrames={1602} {...v} />
       <Composition id="MarketingDashboard" component={MarketingDashboard} durationInFrames={reelLength(marketingBeats)} {...v} />
       <Composition id="IntakeRevenue" component={IntakeRevenue} durationInFrames={reelLength(intakeBeats)} {...v} />
       <Composition id="SpeedToLead" component={SpeedToLead} durationInFrames={reelLength(speedBeats)} {...v} />

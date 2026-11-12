@@ -12,23 +12,49 @@ the file, **you post it**.
 
 ## 1. What the agent knows (the content brain)
 
+Source: infinitesolutions1.com (home, About, and the service pages), read
+2026-11-12. Phrases in quotes are ISC's own wording.
+
 ### The story ISC tells, in one line
-> Law firms don't have a lead problem or a staff problem. They have a
-> **systems** problem — and ISC installs the system, department by department,
-> with AI in every seat and a dashboard on top.
+> **"Sign more of the cases you already pay to generate."** ISC is operations
+> & AI consulting for plaintiff firms, from solo practices to 500+ people.
+> It fixes intake, case movement and reporting, "then add[s] AI where it earns
+> its place."
 
-### The four departments + the layer over them
+The point of view every video argues (from About):
+1. "Demand is rarely the first constraint. What happens in the first hour after an inquiry usually is."
+2. "Software does not fix an undefined process. It moves the same gaps faster."
+3. "A report that stops at lead volume is not a growth report. The chain ends at signed cases."
+4. "AI belongs inside a workflow with an owner, a control, and a measure."
+5. "Signed cases are the scorecard."
 
-| # | Department | Bottlenecks we show | ISC solution we show | KPI on the dashboard |
+### The departments + the layer over them (ISC's own services)
+
+| # | Department (ISC service) | Bottleneck, in ISC's words | What ISC builds | KPI on the dashboard |
 |---|---|---|---|---|
-| 1 | **Marketing** | Spend with no attribution. Nobody knows cost per *signed* case. Leads come in and go cold. | Source tracking end to end, AI ad/content engine, lead routing in seconds | Cost per lead, cost per signed case, ROAS by source |
-| 2 | **Intake** | Missed after-hours calls. Slow speed-to-lead. Every intake specialist qualifies differently. Retainers sit unsigned. | 24/7 AI intake agent (voice + SMS), scripted qualification protocol, instant e-sign, auto-handoff to case team | Speed to lead, answer rate, lead→signed %, time to retainer |
-| 3 | **Pre-Lit** | Treatment gaps. Clients ghost. Records & bills take weeks to chase. Demand prep is manual. Case managers drown in "any update?" calls. | Automated treatment check-ins, records/bills request automation, AI medical chronology, AI demand draft, client status updates pushed automatically | Treatment compliance, days to records, days to demand, client touchpoints, case manager load |
-| 4 | **Litigation** | Messy pre-lit → lit handoff. Deadline risk. Discovery & depo volume eats attorney hours. | Structured handoff protocol, deadline calendaring automation, AI discovery & deposition summaries | Deadlines met, days in stage, attorney hours per case |
-| ★ | **The ISC layer** | Partners are blind. Data lives in 6 tools. No SOPs, so nothing scales. | **Structure + protocols (SOPs), automations, AI agents, live KPI dashboards** → visibility & transparency from first click to settlement | Case velocity, pipeline value, firm-wide scorecard |
+| 1 | **Marketing**: Growth Marketing & Revenue Intelligence | "Cost per lead tracked, cost per signed case unknown." Agencies report clicks, intake reports leads, the CMS holds signed cases, and "nobody owns the link between them." | Campaign-to-signed-case attribution, vendor/paid-media oversight, conversion analysis, executive dashboards & forecasting | Cost per signed case, signed cases & fees by source |
+| 2 | **Intake**: AI Contact Center & Intake Optimization | "Calls go unanswered after hours. Web forms wait in an inbox." "Qualification depends on who picked up." Follow-up "stops after one or two attempts." | AI contact center, after-hours coverage, missed-call recovery in minutes, qualification logic, QA & coaching dashboards. AI transcribes the call, fills case fields, flags high-value cases by Slack/SMS, and a person reviews | Speed to lead (under 5 min), answer rate, inquiry → consult → signed |
+| 3 | **Pre-Lit**: Pre-Litigation Case Management | "Case managers are busy. Cases are still waiting." "Clients calling for updates the team should have sent." Records "requested late, or twice." | 7 stages: sign-up → coverage → treatment → records & bills → liens → demand → resolution. Treatment-gap alerts, records requests that reissue on a timer, a 14-day client-contact rule, AI demand prep with attorney review | "No client quiet for two weeks," days to records, days to demand |
+| 4 | **Litigation**: Litigation Case Management | "After filing, cases wait on service, discovery, depositions and experts." | "Every phase an owner, a deadline and a next step." Deficiency letters drafted automatically, AI deposition summaries, AI-drafted mediation brief, all reviewed by attorneys | Time on desk per phase, days back per case |
+| ★ | **The ISC layer**: AI Strategy & Executive Roadmap · Fractional AI/Ops Leadership · Case Management Automation · Staffing | "The plan exists. Nobody senior is running it." "No weekly scorecard anyone trusts." | Assess → Design → Operate. SOPs, routing rules, dashboards, automations. "One scorecard, named owners and a weekly cadence." "You own what we build." | The weekly firm scorecard: conversion, cycle time, capacity, profitability |
 
 These live in `skills/li-video/isc.json` so every video draws from one source
 of truth and you edit services/KPIs in one place.
+
+### Brand (pulled from the site's stylesheet)
+- Ink `#11120f` · cream `#f7f4ee` · gold `#b48a4a` / light gold `#d6aa66` / deep gold `#7d5a22` · slate teal `#315f72` · charcoal `#27313a`
+- Type: **Lora** (serif headlines) + **Inter** (UI, captions)
+- Feel: calm, premium, precise. No hype. This means **quieter versions** of
+  the reference reels' motion: the same pacing and structure, without the
+  neon-and-glitch overload. Effect E05 Paper Cut (a cream sheet on a dark
+  stage) is already on-brand.
+- The site labels every mock "Illustrative. No real client data." **Every
+  video keeps that label** on any mock UI or number.
+
+### CTAs ISC already has (better than a bare comment keyword)
+- Free assessment ("Free, under NDA. We reply the same business day.")
+- The tools: **Speed-to-Lead Calculator**, **Revenue Leak Calculator**, **Case Cycle Calculator**
+- Pairing: each video ends on the matching calculator (intake → Speed-to-Lead, marketing → Revenue Leak, pre-lit/lit → Case Cycle), plus a comment keyword for LinkedIn reach.
 
 ### Honesty rule (inherited from this repo)
 No invented stats or client results. Any number a script needs comes back as
@@ -36,7 +62,7 @@ No invented stats or client results. Any number a script needs comes back as
 call after 5pm", "{{client}} cut days-to-demand from {{A}} to {{B}}").
 
 ### Needed from you before build
-- ISC full name, logo (SVG preferred), brand colors, fonts
+- Logo as SVG (colors and fonts are now pulled from the site)
 - Your handle(s) + the comment keyword CTA you want (e.g. comment "SYSTEM")
 - 3–5 real proof points you're allowed to use
 - Voice choice (see §4)
@@ -66,7 +92,7 @@ plays muted), handle in the corner, safe zones kept clear of the UI overlay.
 
 Effects are from your **11-effects pack** (numbered E01–E11 below).
 
-### Type 1 — "The $0-overhead intake system PI firms are installing" (~75s, VO)
+### Type 1 — "One call, from ring to review" (~75s, VO; built on the site's own intake-automation story)
 
 | t | VO (draft) | On screen | Effect |
 |---|---|---|---|
@@ -74,10 +100,10 @@ Effects are from your **11-effects pack** (numbered E01–E11 below).
 | 2–6s | "Nobody answers. They call the next firm on Google." | Phone screen glitches to a competitor's logo (generic) | **E10 Glitch** |
 | 6–10s | "That one call was worth {{$avg case value}}." | Number slams on cream paper | **E05 Paper Cut** |
 | 10–14s | "Here's the system that makes that impossible." | Crash-zoom into a tile → system canvas | **E03 Zoom-through** |
-| 14–40s | Step by step: AI agent answers → qualifies on protocol → books & e-signs → hands to case manager | Nodes draw in one by one, connectors animate, each node opens a mini UI mock (chat bubbles, e-sign check, CRM card) | Remotion `<Sequence>` + spring nodes, Lottie icons |
+| 14–40s | Step by step: the call is answered → AI transcribes it and fills the case fields → a high-value case is flagged to the team by Slack/SMS → a person reviews and decides → consult booked | Nodes draw in one by one (Inquiry received → Routed by fit → Follow-up launched → Consult booked, as on the site), connectors animate, each node opens a mini UI mock | Remotion `<Sequence>` + spring nodes, Lottie icons |
 | 40–52s | "And every step lands on one dashboard." | KPI bars grow: speed to lead, sign rate, cost per signed case | **E06 Charts** |
 | 52–62s | "That's intake. We do this for marketing, pre-lit and litigation too." | Pull back from intake row to full 4-department board | **E09 Pullback** |
-| 62–75s | "Comment SYSTEM and I'll send you the full map." | Terminal types the CTA line; ISC logo wiggle | **E11 Typewriter** + Wiggle logo |
+| 62–75s | "Find your own number with the Speed-to-Lead Calculator, or comment SYSTEM and I'll send you the map." | Terminal types the CTA line; ISC logo wiggle | **E11 Typewriter** + Wiggle logo |
 
 ### Type 2 — "Meet the ISC Command Center" (~45s)
 

@@ -1,12 +1,12 @@
 import React from "react";
-import { spring, useCurrentFrame, useVideoConfig } from "remotion";
+import { spring, useVideoConfig } from "remotion";
 import { brand } from "../brand";
 import { Stage } from "./Stage";
-import { rand, tween } from "./util";
+import { rand, tween , usePacedFrame } from "./util";
 
 /** E01 Orbit — a phone flies up the frame, its feed scrolling at blur speed, a label riding its top edge. */
 export const Orbit: React.FC<{ label: string; caption: string }> = ({ label, caption }) => {
-  const frame = useCurrentFrame();
+  const frame = usePacedFrame();
   const { fps } = useVideoConfig();
   const rise = spring({ frame, fps, config: { damping: 18, mass: 0.9 } });
   const y = (1 - rise) * 1500;

@@ -23,3 +23,8 @@ export const rand = (seed: number) => {
   const x = Math.sin(seed * 12.9898 + 78.233) * 43758.5453;
   return x - Math.floor(x);
 };
+
+import { useCurrentFrame } from "remotion";
+import { PACE } from "../brand";
+/** Current frame slowed by the global PACE, so every effect breathes at the same tempo. */
+export const usePacedFrame = () => useCurrentFrame() / PACE;

@@ -1,12 +1,12 @@
 import React from "react";
-import { useCurrentFrame, useVideoConfig } from "remotion";
+import { useVideoConfig } from "remotion";
 import { brand } from "../brand";
 import { Stage } from "./Stage";
-import { tween } from "./util";
+import { tween , usePacedFrame } from "./util";
 
 /** E11 Typewriter — a terminal types the line out with a blinking cursor. */
 export const Typewriter: React.FC<{ line: string; cps?: number; prompt?: string }> = ({ line, cps = 26, prompt = "isc" }) => {
-  const frame = useCurrentFrame();
+  const frame = usePacedFrame();
   const { fps } = useVideoConfig();
   const n = Math.min(line.length, Math.floor(Math.max(0, frame - 8) * (cps / fps)));
   const cursorOn = Math.floor(frame / 15) % 2 === 0 || n < line.length;

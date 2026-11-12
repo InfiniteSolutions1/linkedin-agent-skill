@@ -26,3 +26,6 @@ export const SAFE = { x: 90, top: 160, bottom: 300 };
 export const W = 1080;
 export const H = 1920;
 export const FPS = 30;
+
+/** Global pace. 1 = original speed; higher = slower. Scales every effect's internal motion and scene holds. */
+export const PACE = 1.6;

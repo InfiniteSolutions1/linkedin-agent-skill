@@ -1,12 +1,12 @@
 import React from "react";
-import { useCurrentFrame, useVideoConfig } from "remotion";
+import { useVideoConfig } from "remotion";
 import { brand } from "../brand";
 import { Stage } from "./Stage";
-import { tween } from "./util";
+import { tween , usePacedFrame } from "./util";
 
 /** E02 Vertigo — the centre card holds its size while the corridor of cards stretches away behind it. */
 export const Vertigo: React.FC<{ center: string; wall: string[]; caption: string }> = ({ center, wall, caption }) => {
-  const frame = useCurrentFrame();
+  const frame = usePacedFrame();
   const { fps } = useVideoConfig();
   const t = frame / fps;
   const rings = 14;

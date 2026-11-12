@@ -1,15 +1,15 @@
 import React from "react";
-import { spring, useCurrentFrame, useVideoConfig } from "remotion";
+import { spring, useVideoConfig } from "remotion";
 import { brand } from "../brand";
 import { Stage } from "./Stage";
-import { tween } from "./util";
+import { tween , usePacedFrame } from "./util";
 
 /**
  * Logo sting (Wiggle-style bounce). PLACEHOLDER wordmark: an infinity mark + "Infinite Solutions"
  * in Lora until the real SVG logo is dropped into public/logo.svg.
  */
 export const LogoSting: React.FC<{ cta?: string }> = ({ cta }) => {
-  const frame = useCurrentFrame();
+  const frame = usePacedFrame();
   const { fps } = useVideoConfig();
   const draw = tween(frame, 0, 1.1 * fps, 0, 1);
   const pop = spring({ frame: frame - 0.8 * fps, fps, config: { damping: 7, stiffness: 140 } });

@@ -1,14 +1,14 @@
 import React from "react";
-import { useCurrentFrame, useVideoConfig } from "remotion";
+import { useVideoConfig } from "remotion";
 import { brand } from "../brand";
 import { Stage } from "./Stage";
-import { easeInOut, tween } from "./util";
+import { easeInOut, tween , usePacedFrame } from "./util";
 
 export type Dept = { name: string; items: string[] };
 
 /** E09 Pullback — start tight on one row, crane up until the whole board fills the frame. */
 export const Pullback: React.FC<{ depts: Dept[]; focus?: number; title: string }> = ({ depts, focus = 1, title }) => {
-  const frame = useCurrentFrame();
+  const frame = usePacedFrame();
   const { fps } = useVideoConfig();
   const z = tween(frame, 0.4 * fps, 2.4 * fps, 3.2, 1, easeInOut);
   const colW = 210;

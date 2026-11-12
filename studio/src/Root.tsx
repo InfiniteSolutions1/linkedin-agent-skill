@@ -6,7 +6,7 @@ import { EffectsReel } from "./videos/EffectsReel";
 export const RemotionRoot: React.FC = () => {
   return (
     <>
-      <Composition id="EffectsReel" component={EffectsReel} durationInFrames={Math.round(29.2 * FPS - 110)} fps={FPS} width={W} height={H} />
+      <Composition id="EffectsReel" component={EffectsReel} durationInFrames={1252} fps={FPS} width={W} height={H} />
     </>
   );
 };

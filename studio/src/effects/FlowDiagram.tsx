@@ -1,9 +1,9 @@
 import React from "react";
-import { spring, useCurrentFrame, useVideoConfig } from "remotion";
+import { spring, useVideoConfig } from "remotion";
 import { brand } from "../brand";
 import { Illustrative } from "./Illustrative";
 import { Stage } from "./Stage";
-import { tween } from "./util";
+import { tween , usePacedFrame } from "./util";
 
 export type FlowStep = { title: string; detail: string; owner?: string };
 
@@ -13,7 +13,7 @@ export const FlowDiagram: React.FC<{ heading: string; steps: FlowStep[]; perStep
   steps,
   perStep = 22,
 }) => {
-  const frame = useCurrentFrame();
+  const frame = usePacedFrame();
   const { fps } = useVideoConfig();
   const top = 420;
   const gap = 270;

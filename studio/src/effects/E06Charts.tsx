@@ -1,9 +1,9 @@
 import React from "react";
-import { interpolateColors, spring, useCurrentFrame, useVideoConfig } from "remotion";
+import { interpolateColors, spring, useVideoConfig } from "remotion";
 import { brand } from "../brand";
 import { Illustrative } from "./Illustrative";
 import { Stage } from "./Stage";
-import { rand, tween } from "./util";
+import { rand, tween , usePacedFrame } from "./util";
 
 /** E06 Charts — bars grow in a staggered wave on a dark dashboard panel, with a KPI counter. */
 export const Charts: React.FC<{ kpi: string; value: number; suffix: string; sub: string }> = ({
@@ -12,7 +12,7 @@ export const Charts: React.FC<{ kpi: string; value: number; suffix: string; sub:
   suffix,
   sub,
 }) => {
-  const frame = useCurrentFrame();
+  const frame = usePacedFrame();
   const { fps } = useVideoConfig();
   const n = 16;
   const count = Math.round(tween(frame, 8, 2 * fps, 0, value));

@@ -1,15 +1,15 @@
 import React from "react";
-import { spring, useCurrentFrame, useVideoConfig } from "remotion";
+import { spring, useVideoConfig } from "remotion";
 import { brand } from "../brand";
 import { Illustrative } from "./Illustrative";
 import { Stage } from "./Stage";
-import { tween } from "./util";
+import { tween , usePacedFrame } from "./util";
 
 export type Tile = { label: string; value: string; tone?: "ok" | "warn" };
 
 /** E07 Phone Screens — a phone shows a live scorecard while rings breathe out behind it; labels pop in on each side. */
 export const PhoneScreens: React.FC<{ title: string; tiles: Tile[]; labels: string[] }> = ({ title, tiles, labels }) => {
-  const frame = useCurrentFrame();
+  const frame = usePacedFrame();
   const { fps } = useVideoConfig();
   const enter = spring({ frame, fps, config: { damping: 16 } });
   const scroll = tween(frame, fps, 4 * fps, 0, 260);

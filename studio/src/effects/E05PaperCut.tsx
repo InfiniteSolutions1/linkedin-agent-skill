@@ -1,8 +1,8 @@
 import React from "react";
-import { spring, useCurrentFrame, useVideoConfig } from "remotion";
+import { spring, useVideoConfig } from "remotion";
 import { brand } from "../brand";
 import { Stage } from "./Stage";
-import { tween } from "./util";
+import { tween , usePacedFrame } from "./util";
 
 /** E05 Paper Cut — a cream sheet slaps onto the dark stage; words press on one at a time. */
 export const PaperCut: React.FC<{ words: string[]; accent?: number[]; perWord?: number; source?: string }> = ({
@@ -11,7 +11,7 @@ export const PaperCut: React.FC<{ words: string[]; accent?: number[]; perWord?: 
   perWord = 6,
   source,
 }) => {
-  const frame = useCurrentFrame();
+  const frame = usePacedFrame();
   const { fps } = useVideoConfig();
   const slap = spring({ frame, fps, config: { damping: 11, stiffness: 160 } });
   const start = 10;

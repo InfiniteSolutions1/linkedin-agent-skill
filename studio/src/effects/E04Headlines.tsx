@@ -1,12 +1,12 @@
 import React from "react";
-import { useCurrentFrame } from "remotion";
+
 import { brand } from "../brand";
 import { Stage } from "./Stage";
-import { tween } from "./util";
+import { tween , usePacedFrame } from "./util";
 
 /** E04 Headlines — a tilted 3D wall of cards; neighbouring columns scroll in opposite directions. */
 export const Headlines: React.FC<{ lines: string[]; title: string }> = ({ lines, title }) => {
-  const frame = useCurrentFrame();
+  const frame = usePacedFrame();
   const cols = 4;
   return (
     <Stage>

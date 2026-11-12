@@ -1,7 +1,7 @@
 import React from "react";
 import { linearTiming, TransitionSeries } from "@remotion/transitions";
 import { AbsoluteFill, useVideoConfig } from "remotion";
-import { brand } from "../brand";
+import { brand, PACE } from "../brand";
 import { Orbit } from "../effects/E01Orbit";
 import { PaperCut } from "../effects/E05PaperCut";
 import { FlowDiagram } from "../effects/FlowDiagram";
@@ -21,15 +21,15 @@ export const EffectsReel: React.FC = () => {
   return (
     <AbsoluteFill style={{ backgroundColor: brand.ink }}>
     <TransitionSeries>
-      <TransitionSeries.Sequence name="E01 Orbit" durationInFrames={2.5 * fps}>
+      <TransitionSeries.Sequence name="E01 Orbit" durationInFrames={Math.round(2.5 * PACE * fps)}>
         <Orbit label="INQUIRY RECEIVED · 9:47 PM" caption="Who answers?" />
       </TransitionSeries.Sequence>
       <TransitionSeries.Transition presentation={glitch()} timing={T(10)} />
-      <TransitionSeries.Sequence name="E05 Paper Cut" durationInFrames={3 * fps}>
+      <TransitionSeries.Sequence name="E05 Paper Cut" durationInFrames={Math.round(3 * PACE * fps)}>
         <PaperCut words={["Demand", "is", "rarely", "the", "first", "constraint."]} accent={[2]} source="The ISC point of view" />
       </TransitionSeries.Sequence>
-      <TransitionSeries.Transition presentation={zoomThrough()} timing={T(14)} />
-      <TransitionSeries.Sequence name="Flow" durationInFrames={4 * fps}>
+      <TransitionSeries.Transition presentation={zoomThrough()} timing={T(22)} />
+      <TransitionSeries.Sequence name="Flow" durationInFrames={Math.round(4 * PACE * fps)}>
         <FlowDiagram
           heading="One call, from ring to review."
           steps={[
@@ -40,12 +40,12 @@ export const EffectsReel: React.FC = () => {
           ]}
         />
       </TransitionSeries.Sequence>
-      <TransitionSeries.Transition presentation={zoomThrough()} timing={T(14)} />
-      <TransitionSeries.Sequence name="E06 Charts" durationInFrames={2.6 * fps}>
+      <TransitionSeries.Transition presentation={zoomThrough()} timing={T(22)} />
+      <TransitionSeries.Sequence name="E06 Charts" durationInFrames={Math.round(2.6 * PACE * fps)}>
         <Charts kpi="Responded under five minutes" value={78} suffix="%" sub="Inquiry → consult, by source" />
       </TransitionSeries.Sequence>
       <TransitionSeries.Transition presentation={glitch()} timing={T(10)} />
-      <TransitionSeries.Sequence name="E04 Headlines" durationInFrames={2.7 * fps}>
+      <TransitionSeries.Sequence name="E04 Headlines" durationInFrames={Math.round(2.7 * PACE * fps)}>
         <Headlines
           title="Sound familiar?"
           lines={[
@@ -61,8 +61,8 @@ export const EffectsReel: React.FC = () => {
           ]}
         />
       </TransitionSeries.Sequence>
-      <TransitionSeries.Transition presentation={zoomThrough()} timing={T(14)} />
-      <TransitionSeries.Sequence name="E02 Vertigo" durationInFrames={2.4 * fps}>
+      <TransitionSeries.Transition presentation={zoomThrough()} timing={T(22)} />
+      <TransitionSeries.Sequence name="E02 Vertigo" durationInFrames={Math.round(2.4 * PACE * fps)}>
         <Vertigo
           center="Which marketing dollars produce signed cases?"
           caption="Six tools. No answer."
@@ -70,7 +70,7 @@ export const EffectsReel: React.FC = () => {
         />
       </TransitionSeries.Sequence>
       <TransitionSeries.Transition presentation={glitch()} timing={T(10)} />
-      <TransitionSeries.Sequence name="E07 Phone Screens" durationInFrames={3.4 * fps}>
+      <TransitionSeries.Sequence name="E07 Phone Screens" durationInFrames={Math.round(3.4 * PACE * fps)}>
         <PhoneScreens
           title="This week"
           tiles={[
@@ -84,8 +84,8 @@ export const EffectsReel: React.FC = () => {
           labels={["Intake", "Pre-lit", "Marketing", "Litigation"]}
         />
       </TransitionSeries.Sequence>
-      <TransitionSeries.Transition presentation={zoomThrough()} timing={T(14)} />
-      <TransitionSeries.Sequence name="E09 Pullback" durationInFrames={3.2 * fps}>
+      <TransitionSeries.Transition presentation={zoomThrough()} timing={T(22)} />
+      <TransitionSeries.Sequence name="E09 Pullback" durationInFrames={Math.round(3.2 * PACE * fps)}>
         <Pullback
           title="Every department. One operating system."
           focus={1}
@@ -98,11 +98,11 @@ export const EffectsReel: React.FC = () => {
         />
       </TransitionSeries.Sequence>
       <TransitionSeries.Transition presentation={glitch()} timing={T(10)} />
-      <TransitionSeries.Sequence name="E11 Typewriter" durationInFrames={2.6 * fps}>
+      <TransitionSeries.Sequence name="E11 Typewriter" durationInFrames={Math.round(2.6 * PACE * fps)}>
         <Typewriter line="Put a number on the leak in thirty seconds." />
       </TransitionSeries.Sequence>
-      <TransitionSeries.Transition presentation={zoomThrough()} timing={T(14)} />
-      <TransitionSeries.Sequence name="Logo sting" durationInFrames={2.8 * fps}>
+      <TransitionSeries.Transition presentation={zoomThrough()} timing={T(22)} />
+      <TransitionSeries.Sequence name="Logo sting" durationInFrames={Math.round(2.8 * PACE * fps)}>
         <LogoSting cta="Speed-to-Lead Calculator →" />
       </TransitionSeries.Sequence>
     </TransitionSeries>

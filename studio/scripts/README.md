@@ -8,11 +8,13 @@ way round. Send the files over and I'll sync the captions and cuts to them.
 Lines marked ⚠ contain a statistic with no source yet. Don't record or post
 those until there's a source (or we reword them).
 
-## Current voice: Nora (Higgsfield preset)
+## Current voice: Maya (ElevenLabs via Higgsfield)
 
-All lines are generated with Higgsfield `seed_audio`, preset voice "Nora"
-(voice_id d081b915-6623-4a44-bacf-80d0f1c90a03), then trimmed (edge silence
-removed, pauses capped ~0.4s) and loudness-normalised to -16 LUFS into
-`studio/public/vo/<id>.mp3`. Clip lengths live in `studio/src/vo.ts`; each
-beat in a reel stretches to fit its line. To swap the voice, regenerate the
-same ids and re-run the measuring step.
+All lines are generated with Higgsfield `text2speech_v2`, variant `elevenlabs`,
+preset voice "Maya" (voice_id b0f766b7-8703-4bd1-b973-f857c36837b6). The exact
+spoken text for every clip is in `lines.tsv` (written conversationally: contractions,
+"..." for natural pauses, acronyms written plainly). Clips are edge-trimmed and
+loudness-normalised to -16 LUFS into `studio/public/vo/<id>.mp3`; lengths live in
+`studio/src/vo.ts` and each beat stretches to fit its line.
+
+The per-reel tables below are the original drafts; `lines.tsv` is what is voiced.

@@ -7,3 +7,12 @@ way round. Send the files over and I'll sync the captions and cuts to them.
 
 Lines marked ⚠ contain a statistic with no source yet. Don't record or post
 those until there's a source (or we reword them).
+
+## Current voice: Nora (Higgsfield preset)
+
+All lines are generated with Higgsfield `seed_audio`, preset voice "Nora"
+(voice_id d081b915-6623-4a44-bacf-80d0f1c90a03), then trimmed (edge silence
+removed, pauses capped ~0.4s) and loudness-normalised to -16 LUFS into
+`studio/public/vo/<id>.mp3`. Clip lengths live in `studio/src/vo.ts`; each
+beat in a reel stretches to fit its line. To swap the voice, regenerate the
+same ids and re-run the measuring step.

@@ -10,15 +10,15 @@ import { Beat, Reel } from "./buildReel";
 
 /** Reel: live marketing dashboard (GA4 + Meta + LSA), AI wasted-spend, attribution back to the platforms. */
 export const marketingBeats: Beat[] = [
-  { name: "Hook", sec: 3.2, then: "glitch", el: <PaperCut words={["Your", "agency", "reports", "clicks.", "Who", "reports", "signed", "cases?"]} accent={[6, 7]} perWord={5} /> },
+  { name: "Hook", vo: "101", sec: 3.2, then: "glitch", el: <PaperCut words={["Your", "agency", "reports", "clicks.", "Who", "reports", "signed", "cases?"]} accent={[6, 7]} perWord={5} /> },
   {
-    name: "Blind spot",
+    name: "Blind spot", vo: "102",
     sec: 2.8,
     then: "zoom",
     el: <Vertigo center="What did one signed case cost you last month?" caption="Three platforms. Three answers." wall={["Google Ads", "Meta Ads", "Google LSA", "GA4", "CRM", "Agency PDF", "Spreadsheet", "Call tracking"]} />,
   },
   {
-    name: "Live dashboard",
+    name: "Live dashboard", vo: "103",
     sec: 4.4,
     then: "zoom",
     el: (
@@ -39,7 +39,7 @@ export const marketingBeats: Beat[] = [
     ),
   },
   {
-    name: "AI wasted spend",
+    name: "AI wasted spend", vo: "104",
     sec: 4.2,
     then: "glitch",
     el: (
@@ -57,9 +57,9 @@ export const marketingBeats: Beat[] = [
       />
     ),
   },
-  { name: "Attribution", sec: 4.2, then: "zoom", el: <AttributionLoop question="Are you sending signed-case data back?" platforms={["Google Ads", "Meta", "LSA"]} /> },
-  { name: "Offer", sec: 3.8, then: "zoom", el: <Offer title="Free full marketing audit" items={["Marketing analytics", "SEO", "GEO · AI search engines", "AEO · answer engines"]} /> },
-  { name: "Logo", sec: 2.6, el: <LogoSting cta="Request your free audit →" /> },
+  { name: "Attribution", vo: "105", sec: 4.2, then: "zoom", el: <AttributionLoop question="Are you sending signed-case data back?" platforms={["Google Ads", "Meta", "LSA"]} /> },
+  { name: "Offer", vo: "106", sec: 3.8, then: "zoom", el: <Offer title="Free full marketing audit" items={["Marketing analytics", "SEO", "GEO · AI search engines", "AEO · answer engines"]} /> },
+  { name: "Logo", vo: "107", sec: 2.6, el: <LogoSting cta="Request your free audit →" /> },
 ];
 
 export const MarketingDashboard: React.FC = () => <Reel beats={marketingBeats} />;

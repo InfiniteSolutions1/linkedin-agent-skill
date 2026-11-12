@@ -13,9 +13,9 @@ import { Beat, Reel } from "./buildReel";
  * "SOURCE NEEDED" tag until statSource / claimSource are filled in. Do not post until they are.
  */
 export const speedBeats: Beat[] = [
-  { name: "Hook", sec: 2.8, then: "glitch", el: <Orbit label="NEW LEAD · META FORM · 2:14 PM" caption="Who calls first?" /> },
+  { name: "Hook", vo: "301", sec: 2.8, then: "glitch", el: <Orbit label="NEW LEAD · META FORM · 2:14 PM" caption="Who calls first?" /> },
   {
-    name: "Do you know",
+    name: "Do you know", vo: "302",
     sec: 3.6,
     then: "zoom",
     el: (
@@ -27,7 +27,7 @@ export const speedBeats: Beat[] = [
     ),
   },
   {
-    name: "The race",
+    name: "The race", vo: "303",
     sec: 4.6,
     then: "zoom",
     el: (
@@ -45,13 +45,13 @@ export const speedBeats: Beat[] = [
     ),
   },
   {
-    name: "Can't connect",
+    name: "Can't connect", vo: "304",
     sec: 3.2,
     then: "zoom",
     el: <Question kicker="Can't reach the new lead?" lines={["How many times does your team follow up?"]} unknown={["Attempts per lead", "Hours between attempts", "Leads dropped after 1 try"]} />,
   },
   {
-    name: "Auto-dialer",
+    name: "Auto-dialer", vo: "305",
     sec: 4.8,
     then: "glitch",
     el: (
@@ -69,9 +69,9 @@ export const speedBeats: Beat[] = [
       />
     ),
   },
-  { name: "No excuses", sec: 2.8, then: "zoom", el: <PaperCut words={["No", "excuses.", "Just", "logic."]} accent={[2, 3]} perWord={6} /> },
-  { name: "Offer", sec: 3.8, then: "zoom", el: <Offer title="Free intake assessment" items={["Speed to lead, by source", "Follow-up attempts per lead", "Contact & sign-up rate", "A detailed report: what to fix first"]} /> },
-  { name: "Logo", sec: 2.6, el: <LogoSting cta="Know exactly what to fix →" /> },
+  { name: "No excuses", vo: "306", sec: 2.8, then: "zoom", el: <PaperCut words={["No", "excuses.", "Just", "logic."]} accent={[2, 3]} perWord={6} /> },
+  { name: "Offer", vo: "307", sec: 3.8, then: "zoom", el: <Offer title="Free intake assessment" items={["Speed to lead, by source", "Follow-up attempts per lead", "Contact & sign-up rate", "A detailed report: what to fix first"]} /> },
+  { name: "Logo", vo: "308", sec: 2.6, el: <LogoSting cta="Know exactly what to fix →" /> },
 ];
 
 export const SpeedToLead: React.FC = () => <Reel beats={speedBeats} />;

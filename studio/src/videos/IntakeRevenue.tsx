@@ -15,9 +15,9 @@ const hours = [
 
 /** Reel: intake is a revenue department — calls per hour, abandonment, welcome-message drop-off, ASA, CRM lookup. */
 export const intakeBeats: Beat[] = [
-  { name: "Hook", sec: 3.4, then: "glitch", el: <PaperCut words={["Intake", "isn't", "a", "cost", "center.", "It's", "a", "revenue", "department."]} accent={[7, 8]} perWord={5} /> },
+  { name: "Hook", vo: "201", sec: 3.4, then: "glitch", el: <PaperCut words={["Intake", "isn't", "a", "cost", "center.", "It's", "a", "revenue", "department."]} accent={[7, 8]} perWord={5} /> },
   {
-    name: "Calls per hour",
+    name: "Calls per hour", vo: "202",
     sec: 4.2,
     then: "zoom",
     el: (
@@ -33,7 +33,7 @@ export const intakeBeats: Beat[] = [
     ),
   },
   {
-    name: "Welcome drop-off",
+    name: "Welcome drop-off", vo: "203",
     sec: 4.2,
     then: "zoom",
     el: (
@@ -46,9 +46,9 @@ export const intakeBeats: Beat[] = [
       />
     ),
   },
-  { name: "Speed of answer", sec: 3.0, then: "zoom", el: <Charts kpi="Intake average speed of answer" value={38} suffix=" sec" sub="Tracked every hour, by queue and by agent" /> },
+  { name: "Speed of answer", vo: "204", sec: 3.0, then: "zoom", el: <Charts kpi="Intake average speed of answer" value={38} suffix=" sec" sub="Tracked every hour, by queue and by agent" /> },
   {
-    name: "CRM lookup",
+    name: "CRM lookup", vo: "205",
     sec: 4.2,
     then: "glitch",
     el: (
@@ -65,9 +65,9 @@ export const intakeBeats: Beat[] = [
       />
     ),
   },
-  { name: "Numbers don't lie", sec: 3.2, then: "zoom", el: <PaperCut words={["Numbers", "don't", "lie.", "They", "show", "exactly", "where", "to", "fix."]} accent={[5, 6, 7, 8]} perWord={5} /> },
-  { name: "Offer", sec: 3.8, then: "zoom", el: <Offer title="Free intake assessment" items={["Calls & answer rate by hour", "Abandonment & drop-off", "Average speed of answer", "CRM & automation review"]} /> },
-  { name: "Logo", sec: 2.6, el: <LogoSting cta="We can help →" /> },
+  { name: "Numbers don't lie", vo: "206", sec: 3.2, then: "zoom", el: <PaperCut words={["Numbers", "don't", "lie.", "They", "show", "exactly", "where", "to", "fix."]} accent={[5, 6, 7, 8]} perWord={5} /> },
+  { name: "Offer", vo: "207", sec: 3.8, then: "zoom", el: <Offer title="Free intake assessment" items={["Calls & answer rate by hour", "Abandonment & drop-off", "Average speed of answer", "CRM & automation review"]} /> },
+  { name: "Logo", vo: "208", sec: 2.6, el: <LogoSting cta="We can help →" /> },
 ];
 
 export const IntakeRevenue: React.FC = () => <Reel beats={intakeBeats} />;

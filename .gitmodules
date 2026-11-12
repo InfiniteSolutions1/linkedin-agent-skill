@@ -1,0 +1,15 @@
+[submodule "vendor/remotion-dev__skills"]
+	path = vendor/remotion-dev__skills
+	url = https://github.com/remotion-dev/skills
+[submodule "vendor/greensock__gsap-skills"]
+	path = vendor/greensock__gsap-skills
+	url = https://github.com/greensock/gsap-skills
+[submodule "vendor/talknerdytome-labs__wiggle-claude-skill"]
+	path = vendor/talknerdytome-labs__wiggle-claude-skill
+	url = https://github.com/talknerdytome-labs/wiggle-claude-skill
+[submodule "vendor/zhanziyang__text-to-lottie-plugin"]
+	path = vendor/zhanziyang__text-to-lottie-plugin
+	url = https://github.com/zhanziyang/text-to-lottie-plugin
+[submodule "vendor/delphi-ai__animate-skill"]
+	path = vendor/delphi-ai__animate-skill
+	url = https://github.com/delphi-ai/animate-skill
